@@ -31,69 +31,6 @@ function ProductDetails() {
     animations: []
   });
 
-  // const fetch3DData = () => {
-  //   if (window.Unlimited3D) {
-  //     window.Unlimited3D.getAvailableParts((error, partsResult) => {
-  //       if (!error) {
-  //         const parts = partsResult.map(part => ({
-  //           name: part.name,
-  //           shortName: part.shortName,
-  //           type: part.type,
-  //         }));
-  //         window.Unlimited3D.getAvailableMaterials((matError, matResult) => {
-  //           if (!matError) {
-  //             const materials = matResult.reduce((acc, mat) => {
-  //               acc[mat.shortName] = mat;
-  //               return acc;
-  //             }, {});
-  //             window.Unlimited3D.getAvailableAnimationSets((animSetError, animSetResult) => {
-  //               console.log(animSetResult)
-  //               if (!animSetError) {
-  //                 const allAnimations = [];
-  //                 const allTransitions = [];
-  //                 const fetchAnimationsForSet = (index) => {
-  //                   if (index < animSetResult.length) {
-  //                     const animationSet = animSetResult[index].name;
-  //                     window.Unlimited3D.getAvailableAnimationStates({ animationSet }, (animError, animResult) => {
-  //                       if (!animError) {
-  //                         allAnimations.push(
-  //                           ...animResult.map(anim => ({
-  //                             name: anim.name,
-  //                             shortName: anim.shortName,
-  //                             type: anim.type,
-  //                             animationSetName: animationSet,
-  //                           }))
-  //                         );
-  //                       }
-  //                       window.Unlimited3D.getAvailableAnimationTransitions({ animationSet }, (transError, transResult) => {
-  //                         if (!transError) {
-  //                           allTransitions.push(
-  //                             ...transResult.map(trans => ({
-  //                               name: trans.name,
-  //                               shortName: trans.shortName,
-  //                               type: trans.type,
-  //                               animationSetName: animationSet,
-  //                             }))
-  //                           );
-  //                         }
-  //                         fetchAnimationsForSet(index + 1);
-  //                       });
-  //                     });
-  //                   } else {
-  //                     setConfigData({ parts, materials, animations: allAnimations, transitions: allTransitions });
-  //                   }
-  //                 };
-  //                 fetchAnimationsForSet(0);
-  //               }
-  //             });
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  // };
-
-
   const fetch3DData = () => {
     if (!window.Unlimited3D) {
       console.error("Unlimited3D is not available on the window object.");
