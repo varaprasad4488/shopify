@@ -8,5 +8,10 @@
 
 # Backend
 - In backend repo, All respected API's includes in index.js.
+- Managing product metafields (retrieving, adding, and associating metaobjects).
+- Fetching product information based on handles or IDs.
+- Retrieving media image URLs using the Shopify GraphQL API.
+- Handling metaobject data for customization purposes.
+
 
 
