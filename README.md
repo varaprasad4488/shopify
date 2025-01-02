@@ -35,9 +35,11 @@ https://github.com/varaprasad4488/shopify
 
 `2. cd backend`
 
-`3. npm install`
+`3. setup env`
 
-`4. nodemon index.js`
+`4. npm install`
+
+`5. nodemon index.js`
 
 
 Both frontend and backend are ready to go for work :)
